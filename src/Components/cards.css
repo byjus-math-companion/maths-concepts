@@ -1,10 +1,10 @@
 .hoverCard:hover{
-    border: 1px solid rgb(22,119,255);
+    border: 1px solid rgb(83,34,255);
     box-shadow: 0 2px 5px 0px rgba(94, 94, 94, 0.186);
 }
 
 .hoverCard:hover h2{
-    color: rgb(22,119,255);
+    color: rgb(83,34,255);
 }
 
 h2{
@@ -24,8 +24,43 @@ p{
 .cards-holder{
     display: grid;
     grid-template-columns: repeat(auto-fill, minmax(240px, 150px));
-    gap: 10px;
+    gap: 20px;
     height: 100%;
     overflow: auto;
     justify-content: center;
+}
+
+.ant-card-bordered{
+    padding: 0;
+    height: 100%;
+}
+
+/* Media Query for Phone Screen */
+@media screen and (max-width: 768px) {
+    p{
+        display: none;
+    }
+    .cards-holder {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+        align-items: center;
+        gap: 16px;
+        margin-bottom: 20px;
+    }
+    h2{
+        font-size: 1rem;
+        margin: 0;
+        padding: 5px;
+        text-align: center;
+    }
+    .ant-card .ant-card-body{
+        padding: 0;
+    }
+    .ant-card-bordered{
+        padding: 0;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 }
